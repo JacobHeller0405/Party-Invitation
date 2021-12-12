@@ -1,41 +1,115 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+
+<head>
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script>
+    //Clear default nameField text on click
+    function clearName() {
+      if (document.getElementById('nameField').value == 'First and Last Name') {
+        document.getElementById('nameField').value = ''
+      }
+    }
+    //Clear default phoneField text on click
+    function clearPhone() {
+      if (document.getElementById('phoneField').value == 'example: 212-123-1234') {
+        document.getElementById('phoneField').value = ''
+      }
+    }
+    //Clear default phoneField text on click
+    function clearEmail() {
+      if (document.getElementById('emailField').value == 'example: jeff@gmail.com') {
+        document.getElementById('emailField').value = ''
+      }
+    }
+    //Bring default text back for nameField
+    function resetName() {
+      if (document.getElementById('nameField').value == '') {
+        document.getElementById('nameField').value = 'First and Last Name'
+      }
+    }
+    //Bring default text back for phoneField
+    function resetPhone() {
+      if (document.getElementById('phoneField').value == '') {
+        document.getElementById('phoneField').value = 'example: 212-123-1234'
+      }
+    }
 
+    function resetEmail() {
+      if (document.getElementById('emailField').value == '') {
+        document.getElementById('emailField').value = 'example: jeff@gmail.com'
+      }
+    }
   </script>
 
   <title></title>
   <link rel="stylesheet" type="text/css" href="style.css">
-    <title></title>
-  </head>
-  <body>
-     <div class="container">
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-       <div class="confetti"></div>
-     </div>
-     <div class="container">
+  <title></title>
+</head>
 
-     </div>
-  </body>
+<body>
+  <div class="container">
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+  </div>
+  <div class="container text-center mt-4">
+    <img src="https://see.fontimg.com/api/renderfont4/PK12m/eyJyIjoiZnMiLCJoIjo5MCwidyI6MTAwMCwiZnMiOjkwLCJmZ2MiOiIjRkMwQjBCIiwiYmdjIjoiI0ZGRkZGRiIsInQiOjF9/WW91J3JlIEludml0ZWQgdG8gbXkgQ2hyaXN0bWFzIFBhcnR5ISEhIQ/geraldine-personal-use-italic.png"
+      alt="">
+  </div>
+  <div class="row">
+    <div class="col-lg-5 information">
+      <b>
+        <h1 class="text-center">Information</h1>
+      </b>
+      <ul>
+        <li>322 Sinclair Court</li>
+        <li>December 29th</li>
+        <li>6:00PM-12:00AM</li>
+      </ul>
+    </div>
+    <div class="col-lg-6 RSVP">
+      <main role="main">
+        <div class="contentWrapper">
+          <form action="" method="post" name="signUpForm" id="signUpForm">
+            <fieldset id="signUp">
+              <h3>RSVP</h3>
+
+              <label for="nameField">Name:</label>
+              <input id="nameField" name="nameField" type="text" class="textfield" value="First and Last Name" onFocus="clearName();" onBlur="resetName();">
+
+              <label for="phoneField">Phone:</label>
+              <input id="phoneField" name="phoneField" type="text" class="textfield" value="example: 212-123-1234" onFocus="clearPhone();" onBlur="resetPhone();">
+
+              <label for="emailField">Email:</label>
+              <input id="emailField" name="emailField" type="text" class="textfield" value="example: jeff@gmail.com" onFocus="clearEmail();" onBlur="resetEmail();">
+
+              <input id="submit" type="submit" name="submit" value="Sign Me Up!">
+
+            </fieldset>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
 </html>
